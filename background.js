@@ -11,7 +11,7 @@
   try {
     renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false, powerPreference: 'low-power' });
   } catch { return; }
-  renderer.setClearColor(0x080c14, 0);
+  renderer.setClearColor(0x090f16, 0);
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(44, 1, .1, 90);
   const uniforms = {
@@ -47,7 +47,7 @@
     }
   `;
   const color = `
-    vec3 color = mix(vec3(.18,.39,.73), vec3(.40,.85,.92), smoothstep(-1.2,1.4,vWave));
+    vec3 color = mix(vec3(.12,.31,.42), vec3(.40,.80,.73), smoothstep(-1.2,1.4,vWave));
     float fade = (1.0 - smoothstep(10.0,37.0,vDepth)) * vEdge * uStrength;
   `;
   const pointMaterial = new THREE.ShaderMaterial({

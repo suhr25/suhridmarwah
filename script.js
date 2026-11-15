@@ -90,3 +90,38 @@
   document.addEventListener('visibilitychange', visibility);
   visibility(); align();
 })();
+
+/* Fine-pointer tilt is bounded and decorative. Links retain native interactions. */
+(() => {
+  const card = document.querySelector('.developer-card');
+  if (!card) return;
+  const pointer = matchMedia('(hover: hover) and (pointer: fine)');
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)');
+  const container = card.parentElement;
+  let frame = 0;
+  function reset() {
+    cancelAnimationFrame(frame);
+    frame = 0;
+    card.style.removeProperty('--card-tilt-x');
+    card.style.removeProperty('--card-tilt-y');
+    card.style.removeProperty('--card-light-x');
+    card.style.removeProperty('--card-light-y');
+  }
+  container.addEventListener('pointermove', event => {
+    if (!pointer.matches || reduced.matches) return;
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const bounds = container.getBoundingClientRect();
+      const x = Math.max(0, Math.min(1, (event.clientX - bounds.left) / bounds.width));
+      const y = Math.max(0, Math.min(1, (event.clientY - bounds.top) / bounds.height));
+      card.style.setProperty('--card-tilt-x', `${(0.5 - y) * 7}deg`);
+      card.style.setProperty('--card-tilt-y', `${(x - 0.5) * 7}deg`);
+      card.style.setProperty('--card-light-x', `${x * 100}%`);
+      card.style.setProperty('--card-light-y', `${y * 100}%`);
+      frame = 0;
+    });
+  }, { passive: true });
+  container.addEventListener('pointerleave', reset);
+  pointer.addEventListener('change', reset);
+  reduced.addEventListener('change', reset);
+})();

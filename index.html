@@ -7,245 +7,212 @@
   <title>Suhrid Marwah - AI/ML Engineer & Systems Builder</title>
   <meta name="description"
     content="Portfolio of Suhrid Marwah - B.Tech AI/ML undergrad building intelligent systems at the intersection of AI, robotics, and distributed infrastructure." />
-  <meta name="theme-color" content="#090c12" />
-  <meta name="keywords" content="Suhrid Marwah, AI, ML, Robotics, Rust, C++, Portfolio, Open Source, GSoC, LFX, ESoC" />
+  <meta name="theme-color" content="#090f16" />
+  <meta name="keywords" content="Suhrid Marwah, AI, ML, Robotics, Rust, C++, Portfolio, Open Source" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
     rel="stylesheet" />
 
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+  <!-- Shared icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7"/></symbol>
+    <symbol id="i-out" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M8 7h9v9"/></symbol>
+  </svg>
+
   <div class="scene-backdrop" aria-hidden="true"><canvas id="three-background"></canvas><div class="scene-shade"></div></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span></span></div>
   <a class="skip-link" href="#about">Skip to content</a>
   <div class="reading-progress" aria-hidden="true"></div>
+
   <!-- Navigation -->
   <nav id="navbar" aria-label="Main navigation">
     <a href="#hero" class="nav-logo" aria-label="Home">sm<span class="logo-dot">.</span></a>
     <div class="nav-links">
       <span class="nav-indicator" aria-hidden="true"></span>
       <a href="#about" class="nav-link" data-section="about">About</a>
-      <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+      <a href="#experience" class="nav-link" data-section="experience">Open Source</a>
       <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+      <a href="#card" class="nav-link" data-section="card">Profile</a>
       <a href="#skills" class="nav-link" data-section="skills">Skills</a>
-      <a href="#connect" class="nav-link" data-section="connect">Connect</a>
+      <a href="#connect" class="nav-link" data-section="connect">Contact</a>
     </div>
     <button id="nav-toggle" class="nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
       <span></span><span></span><span></span>
     </button>
   </nav>
 
-  <!-- Mobile Menu -->
   <div id="mobile-menu" class="mobile-menu" inert>
-    <a href="#about" class="mobile-link">About</a>
-    <a href="#experience" class="mobile-link">Experience</a>
-    <a href="#projects" class="mobile-link">Projects</a>
-    <a href="#skills" class="mobile-link">Skills</a>
-    <a href="#connect" class="mobile-link">Connect</a>
+    <a href="#about" class="mobile-link"><span>01</span>About</a>
+    <a href="#experience" class="mobile-link"><span>02</span>Open Source</a>
+    <a href="#projects" class="mobile-link"><span>03</span>Projects</a>
+    <a href="#card" class="mobile-link"><span>04</span>Developer Profile</a>
+    <a href="#skills" class="mobile-link"><span>05</span>Skills</a>
+    <a href="#connect" class="mobile-link"><span>06</span>Contact</a>
   </div>
 
-  <!-- ═══════════ HERO ═══════════ -->
   <main>
+  <!-- ═══════════ HERO ═══════════ -->
   <section id="hero" class="section hero-section">
     <div class="hero-content">
       <div class="hero-greeting">
-        <span class="status-dot"></span><span class="greeting-text">SUHRID MARWAH / PORTFOLIO</span>
+        <span class="status-dot"></span><span class="greeting-text">BANGALORE, IN <span class="sep">/</span> OPEN SOURCE <span class="sep">/</span> AI &amp; SYSTEMS</span>
       </div>
-      <h1 class="hero-name">Suhrid<br /><span class="name-accent">Marwah</span></h1>
-      <p class="hero-role">AI/ML Engineer <span>&middot;</span> Open Source Contributor</p>
+      <h1 class="hero-name">Suhrid<br /><span class="name-accent">Marwah<span class="name-dot">.</span></span></h1>
+      <p class="hero-terminal" aria-label="AI/ML Engineer and Open Source Contributor">
+        <span class="prompt" aria-hidden="true">&gt;</span>
+        <span class="typed" data-words="AI/ML Engineer|Open Source Contributor|Rust · C++ · Python|Robotics &amp; Dataflow Systems" aria-hidden="true">AI/ML Engineer</span><span class="caret" aria-hidden="true"></span>
+      </p>
       <p class="hero-tagline">Building intelligent systems at the intersection of AI, robotics, and distributed infrastructure.</p>
       <div class="hero-cta">
         <a href="#projects" class="btn btn-primary" id="cta-work">
-          <span>View Projects</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg>
+          <span>View Projects</span><svg width="18" height="18"><use href="#i-arrow"/></svg>
         </a>
-        <a href="mailto:suhridmarwah07@gmail.com" target="_blank"
-          rel="noopener noreferrer" class="btn btn-outline" id="cta-connect">
-          <span>Contact Me</span>
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-            <path d="M22 6l-10 7L2 6" />
-          </svg>
+        <a href="#card" class="btn btn-outline" id="cta-card">
+          <span>View Developer Profile</span><span class="btn-kbd" aria-hidden="true">★</span>
         </a>
       </div>
       <div class="hero-socials">
-        <a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer" class="social-icon"
-          aria-label="GitHub">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/suhrid-marwah-25261109-cs/" target="_blank" rel="noopener noreferrer"
-          class="social-icon" aria-label="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-        </a>
-        <a href="mailto:suhridmarwah07@gmail.com" target="_blank"
-          rel="noopener noreferrer" class="social-icon" aria-label="Email">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-          </svg>
-        </a>
+        <a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><svg><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/suhrid-marwah-25261109-cs/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><svg><use href="#i-linkedin"/></svg></a>
+        <a href="mailto:suhridmarwah07@gmail.com" class="social-icon" aria-label="Email"><svg><use href="#i-mail"/></svg></a>
       </div>
     </div>
-    <div class="hero-bottom"><span>BANGALORE, INDIA <span class="muted">/</span> AI / ML &amp; SYSTEMS</span><a href="#about">Scroll to explore <span>↓</span></a></div>
-    <div class="scroll-indicator" aria-hidden="true">
-      <span>Scroll</span>
-      <div class="scroll-line"></div>
-    </div>
+
   </section>
 
   <!-- ═══════════ ABOUT ═══════════ -->
   <section id="about" class="section about-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">01.</span>
-        <h2 class="section-title"><span>About Me</span></h2>
+        <span class="section-number">01</span>
+        <h2 class="section-title"><span>About <em>Me</em></span></h2>
         <div class="section-line"></div>
       </div>
       <div class="about-grid">
+        <aside class="spec-card reveal-item" aria-label="Profile summary">
+          <div class="spec-card-top"><span class="spec-led"></span><span>profile.toml</span></div>
+          <dl class="spec-list">
+            <div><dt>Name</dt><dd>Suhrid Marwah</dd></div>
+            <div><dt>Location</dt><dd>Bangalore, India</dd></div>
+            <div><dt>Role</dt><dd>AI/ML Engineer · Open Source Contributor</dd></div>
+            <div><dt>Focus</dt><dd>AI · Robotics · Distributed Systems</dd></div>
+            <div><dt>Stack</dt><dd>Rust · C++ · Python</dd></div>
+            <div><dt>GitHub</dt><dd><a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer">github.com/suhr25</a></dd></div>
+          </dl>
+        </aside>
         <div class="about-text reveal-group">
           <p class="about-intro reveal-item">
-            I am a <span class="highlight">B.Tech undergraduate in CS AI/ML</span> based in Bangalore with a strong
-            focus
+            I am a <span class="highlight">B.Tech undergraduate in CS AI/ML</span> based in Bangalore with a strong focus
             on systems engineering, robotics, and applied machine learning.
           </p>
           <p class="reveal-item">
-            I actively contribute to open-source through programs like <span class="highlight">GSoC</span>, <span
-              class="highlight">LFX </span>, and <span class="highlight">ESoC</span>. I have worked with
-            organizations including Dora, OpenROAD, Rattler, MalariaGEN, Skforecast, CNCF, OpenTelemetry, and WasmEdge contributing to real-world
-            systems involving dataflow architectures, CI pipelines, and large-scale codebases.
+            I contribute to open source projects. I have worked with organizations
+            including Dora, OpenROAD, Rattler, MalariaGEN, Skforecast, CNCF, OpenTelemetry, and WasmEdge, contributing to
+            real-world systems involving dataflow architectures, CI pipelines, and large-scale codebases.
           </p>
           <p class="reveal-item">
             My work centers on building reliable, testable systems that bridge intelligent agents with real or simulated
             environments. I have experience in <span class="highlight">Rust, C++, and Python</span>, along with hands-on
-            exposure to distributed systems, robotics simulations, and agent-based architectures. I also explored <span
-              class="highlight">Arduino (C++)</span> back in class 9th, sparking my early interest in hardware and
+            exposure to distributed systems, robotics simulations, and agent-based architectures. I also explored
+            <span class="highlight">Arduino (C++)</span> back in class 9th, sparking my early interest in hardware and
             embedded systems.
           </p>
           <div class="about-tags reveal-item">
-            <span class="tag">GSoC</span>
-            <span class="tag">LFX</span>
             <span class="tag">Open Source</span>
-            <span class="tag">Systems Engineering</span>
-            <span class="tag">Robotics</span>
-            <span class="tag">AI Agents</span>
+            <span class="tag">Systems Engineering</span><span class="tag">Robotics</span><span class="tag">AI Agents</span>
             <span class="tag">Distributed Systems</span>
           </div>
         </div>
-        <div class="about-stats reveal-group">
-          <div class="stat-card reveal-item">
-            <span class="stat-number">8</span><span class="stat-plus">+</span>
-            <span class="stat-label">Open Source Orgs</span>
-          </div>
-          <div class="stat-card reveal-item">
-            <span class="stat-number">3</span><span class="stat-label">Core focus areas</span>
-          </div>
-          <div class="stat-card reveal-item">
-            <span class="stat-number">5</span><span class="stat-plus">+</span>
-            <span class="stat-label">Languages</span>
-          </div>
-          <div class="stat-card reveal-item">
-            <span class="stat-number">6</span><span class="stat-plus">+</span>
-            <span class="stat-label">Domains</span>
-          </div>
-        </div>
+      </div>
+      <div class="about-stats reveal-group">
+        <div class="stat-card reveal-item"><span class="stat-number" data-count="8">8</span><span class="stat-plus">+</span><span class="stat-label">Open source orgs</span></div>
+        <div class="stat-card reveal-item"><span class="stat-number" data-count="3">3</span><span class="stat-label">Core focus areas</span></div>
+        <div class="stat-card reveal-item"><span class="stat-number" data-count="5">5</span><span class="stat-plus">+</span><span class="stat-label">Languages</span></div>
+        <div class="stat-card reveal-item"><span class="stat-number" data-count="6">6</span><span class="stat-plus">+</span><span class="stat-label">Domains</span></div>
       </div>
     </div>
   </section>
 
-  <!-- ═══════════ EXPERIENCE / OPEN SOURCE ═══════════ -->
+  <!-- ═══════════ OPEN SOURCE ═══════════ -->
   <section id="experience" class="section experience-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">02.</span>
-        <h2 class="section-title"><span>Open Source Experience</span></h2>
+        <span class="section-number">02</span>
+        <h2 class="section-title"><span>Open Source <em>Experience</em></span></h2>
         <div class="section-line"></div>
+      </div>
+      <p class="section-lede reveal-item">Contributions to real-world systems: robotics dataflow frameworks, chip-design tooling, package managers, genomics pipelines, observability and WebAssembly runtimes.</p>
+      <p class="mono-label reveal-item">Contributed organisations</p>
+      <div class="org-chips reveal-item">
+        <span>dora-rs</span><span>OpenROAD</span><span>MalariaGEN</span><span>conda / rattler</span><span>Skforecast</span><span>CNCF</span><span>OpenTelemetry</span><span>WasmEdge</span>
       </div>
 
       <div class="timeline">
-        <!-- GSoC: Dora -->
-        <div class="timeline-item reveal-item" data-side="left">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item reveal-item">
           <div class="timeline-card">
-            <div class="timeline-badge gsoc">GSoC</div>
+            
             <h3 class="timeline-org">Dora</h3>
-            <p class="timeline-role">Google Summer of Code Contributor</p>
-            <p class="timeline-desc">Contributed to the Dora robotics framework built in Rust, focusing on dataflow
-              architectures and agent-based systems for real or simulated environments.</p>
-            <div class="timeline-tech">
-              <span>Rust</span>
-              <span>Robotics</span>
-              <span>Dataflow</span>
-            </div>
+            <p class="timeline-role">Open Source Contributor</p>
+            <p class="timeline-desc">Contributed to the Dora robotics framework built in Rust, focusing on dataflow architectures and agent-based systems for real or simulated environments.</p>
+            <div class="timeline-tech"><span>Rust</span><span>Robotics</span><span>Dataflow</span></div>
           </div>
         </div>
-
-        <!-- GSoC: MalariaGEN -->
-        <div class="timeline-item reveal-item" data-side="right">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item reveal-item">
           <div class="timeline-card">
-            <div class="timeline-badge gsoc">GSoC</div>
+            
             <h3 class="timeline-org">MalariaGEN</h3>
-            <p class="timeline-role">Google Summer of Code Contributor</p>
-            <p class="timeline-desc">Contributed to the MalariaGEN genomic epidemiology project, working with
-              large-scale datasets and scientific computing pipelines.</p>
-            <div class="timeline-tech">
-              <span>Python</span>
-              <span>Jupyter</span>
-              <span>Data Science</span>
-            </div>
+            <p class="timeline-role">Open Source Contributor</p>
+            <p class="timeline-desc">Contributed to the MalariaGEN genomic epidemiology project, working with large-scale datasets and scientific computing pipelines.</p>
+            <div class="timeline-tech"><span>Python</span><span>Jupyter</span><span>Data Science</span></div>
           </div>
         </div>
-
-        <!-- GSoC: OpenROAD -->
-        <div class="timeline-item reveal-item" data-side="left">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item reveal-item">
           <div class="timeline-card">
-            <div class="timeline-badge gsoc">GSoC</div>
+            
             <h3 class="timeline-org">OpenROAD</h3>
-            <p class="timeline-role">Google Summer of Code Contributor</p>
-            <p class="timeline-desc">Worked on production-ready containerization, CI/CD pipelines, cross-platform
-              validation, and comprehensive testing infrastructure for OpenROAD-MCP.</p>
-            <div class="timeline-tech">
-              <span>C++</span>
-              <span>Verilog</span>
-              <span>Docker</span>
-              <span>CI/CD</span>
-            </div>
+            <p class="timeline-role">Open Source Contributor</p>
+            <p class="timeline-desc">Worked on production-ready containerization, CI/CD pipelines, cross-platform validation, and comprehensive testing infrastructure for OpenROAD-MCP.</p>
+            <div class="timeline-tech"><span>C++</span><span>Verilog</span><span>Docker</span><span>CI/CD</span></div>
           </div>
         </div>
-
-        <!-- ESoC: Rattler -->
-        <div class="timeline-item reveal-item" data-side="left">
-          <div class="timeline-dot"></div>
+        <div class="timeline-item reveal-item">
           <div class="timeline-card">
-            <div class="timeline-badge esoc">ESoC</div>
+            
             <h3 class="timeline-org">Rattler</h3>
-            <p class="timeline-role">ESoC Contributor - Package Infrastructure</p>
-            <p class="timeline-desc">Contributed to the Rattler project - a high-performance Conda package resolver and
-              installer written in Rust, improving packaging infrastructure.</p>
-            <div class="timeline-tech">
-              <span>Rust</span>
-              <span>Package Management</span>
-            </div>
+            <p class="timeline-role">Contributor · Package Infrastructure</p>
+            <p class="timeline-desc">Contributed to Rattler, a high-performance Conda package resolver and installer written in Rust, improving packaging infrastructure.</p>
+            <div class="timeline-tech"><span>Rust</span><span>Package Management</span></div>
           </div>
         </div>
-
-<div class="timeline-item reveal-item"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-badge">Observability</div><h3 class="timeline-org">OpenTelemetry</h3><p class="timeline-role">Open-source contributor</p><p class="timeline-desc">Open-source work in the OpenTelemetry ecosystem, with a focus on TypeScript and Python.</p><div class="timeline-tech"><span>TypeScript</span><span>Python</span><span>Observability</span></div></div></div>
-<div class="timeline-item reveal-item"><div class="timeline-dot"></div><div class="timeline-card"><div class="timeline-badge">WebAssembly</div><h3 class="timeline-org">WasmEdge</h3><p class="timeline-role">Open-source contributor</p><p class="timeline-desc">Open-source work in the WasmEdge ecosystem, focused on C++ and WebAssembly runtime systems.</p><div class="timeline-tech"><span>C++</span><span>WebAssembly</span><span>Runtime systems</span></div></div></div>
-        <div class="timeline-line"></div>
+        <div class="timeline-item reveal-item">
+          <div class="timeline-card">
+            <div class="timeline-badge">Observability</div>
+            <h3 class="timeline-org">OpenTelemetry</h3>
+            <p class="timeline-role">Open-source contributor</p>
+            <p class="timeline-desc">Open-source work in the OpenTelemetry ecosystem, with a focus on TypeScript and Python.</p>
+            <div class="timeline-tech"><span>TypeScript</span><span>Python</span><span>Observability</span></div>
+          </div>
+        </div>
+        <div class="timeline-item reveal-item">
+          <div class="timeline-card">
+            <div class="timeline-badge">WebAssembly</div>
+            <h3 class="timeline-org">WasmEdge</h3>
+            <p class="timeline-role">Open-source contributor</p>
+            <p class="timeline-desc">Open-source work in the WasmEdge ecosystem, focused on C++ and WebAssembly runtime systems.</p>
+            <div class="timeline-tech"><span>C++</span><span>WebAssembly</span><span>Runtime systems</span></div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -254,114 +221,242 @@
   <section id="projects" class="section projects-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">03.</span>
-        <h2 class="section-title"><span>Selected Projects</span></h2>
+        <span class="section-number">03</span>
+        <h2 class="section-title"><span>Selected <em>Projects</em></span></h2>
         <div class="section-line"></div>
       </div>
-      <p class="projects-note reveal-item">Here are a few selected projects. Please find more on <a
-          href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer">my GitHub →</a></p>
+      <p class="projects-note reveal-item">A few selected builds. More on <a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer">my GitHub ↗</a></p>
 
       <div class="projects-grid">
-        <!-- FocusFlow -->
-        <article class="project-card reveal-item" data-tilt>
+        <article class="project-card reveal-item">
           <div class="project-card-inner">
             <div class="project-icon" aria-hidden="true"></div>
             <div class="project-header">
-              <h3 class="project-name">FocusFlow</h3>
-              <div class="project-links">
-                <a href="https://github.com/suhr25/Focusflow" target="_blank" rel="noopener noreferrer"
-                  aria-label="View FocusFlow source on GitHub" class="project-link-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                    <path
-                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                  </svg>
-                </a>
-              </div>
+              <div><h3 class="project-name">FocusFlow</h3><p class="project-kicker">Deep-work productivity app</p></div>
+              <a href="https://github.com/suhr25/Focusflow" target="_blank" rel="noopener noreferrer" aria-label="View FocusFlow source on GitHub" class="project-link-icon"><svg width="16" height="16"><use href="#i-github"/></svg></a>
             </div>
-            <p class="project-desc">A productivity-focused web application designed to help students organize tasks and
-              maintain deep work sessions through a clean, distraction-free interface.</p>
+            <p class="project-desc">A productivity-focused web application designed to help students organize tasks and maintain deep work sessions through a clean, distraction-free interface.</p>
             <ul class="project-highlights">
-              <li>Built an intuitive task management system for structured workflows</li>
-              <li>Designed UI focused on reducing cognitive load and improving focus</li>
-              <li>Developed a lightweight, responsive frontend</li>
+              <li>Intuitive task management for structured workflows</li>
+              <li>UI focused on reducing cognitive load</li>
+              <li>Lightweight, responsive frontend</li>
             </ul>
-            <div class="project-tech">
-              <span>JavaScript</span>
-              <span>HTML</span>
-              <span>CSS</span>
-            </div>
+            <div class="project-tech"><span>JavaScript</span><span>HTML</span><span>CSS</span></div>
           </div>
         </article>
 
-        <!-- Exponent -->
-        <article class="project-card reveal-item" data-tilt>
+        <article class="project-card reveal-item">
           <div class="project-card-inner">
             <div class="project-icon" aria-hidden="true"></div>
             <div class="project-header">
-              <h3 class="project-name">Exponent</h3>
-              <div class="project-links">
-                <a href="https://github.com/suhr25/Exponent" target="_blank" rel="noopener noreferrer"
-                  aria-label="View Exponent source on GitHub" class="project-link-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                    <path
-                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                  </svg>
-                </a>
-              </div>
+              <div><h3 class="project-name">Exponent</h3><p class="project-kicker">Real-time market analysis</p></div>
+              <a href="https://github.com/suhr25/Exponent" target="_blank" rel="noopener noreferrer" aria-label="View Exponent source on GitHub" class="project-link-icon"><svg width="16" height="16"><use href="#i-github"/></svg></a>
             </div>
-            <p class="project-desc">A real-time market analysis platform that provides users with live stock data,
-              trends, and financial insights through API integrations.</p>
+            <p class="project-desc">A real-time market analysis platform that provides users with live stock data, trends, and financial insights through API integrations.</p>
             <ul class="project-highlights">
-              <li>Integrated external APIs for real-time stock price tracking and news</li>
-              <li>Developed a unified dashboard for visualizing market trends</li>
-              <li>Enabled consolidated access to historical and live financial data</li>
+              <li>External APIs for live prices and news</li>
+              <li>Unified dashboard for market trends</li>
+              <li>Historical and live data in one place</li>
             </ul>
-            <div class="project-tech">
-              <span>JavaScript</span>
-              <span>REST APIs</span>
-              <span>Data Viz</span>
-            </div>
+            <div class="project-tech"><span>JavaScript</span><span>REST APIs</span><span>Data Viz</span></div>
           </div>
         </article>
 
-        <!-- Evenly: portfolio entry only; external repository is unchanged. -->
         <article class="project-card reveal-item project-evenly">
-          <div class="project-card-inner"><div class="project-icon" aria-hidden="true"></div><div class="project-header"><h3 class="project-name">Evenly</h3><div class="project-links"><a href="https://github.com/suhr25/Evenly" target="_blank" rel="noopener noreferrer" aria-label="View Evenly source on GitHub" class="project-link-icon">↗</a></div></div>
-          <p class="project-desc">An AI-powered money operating system that brings personal finances and shared expenses into one place.</p>
-          <ul class="project-highlights"><li>Track expenses, budgets, and savings goals</li><li>Split group expenses and simplify settlements</li><li>Scan receipts and explore spending with an AI assistant</li></ul>
-          <div class="project-tech"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div></div>
-        </article>
-
-        <!-- CareLink-Bharat -->
-        <article class="project-card reveal-item" data-tilt>
           <div class="project-card-inner">
             <div class="project-icon" aria-hidden="true"></div>
             <div class="project-header">
-              <h3 class="project-name">CareLink-Bharat</h3>
-              <div class="project-links">
-                <a href="https://github.com/suhr25/CareLink-Bharat" target="_blank" rel="noopener noreferrer"
-                  aria-label="View CareLink source on GitHub" class="project-link-icon">
-                  <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                    <path
-                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                  </svg>
-                </a>
-              </div>
+              <div><h3 class="project-name">Evenly</h3><p class="project-kicker">AI money operating system</p></div>
+              <a href="https://github.com/suhr25/Evenly" target="_blank" rel="noopener noreferrer" aria-label="View Evenly source on GitHub" class="project-link-icon"><svg width="16" height="16"><use href="#i-github"/></svg></a>
             </div>
-            <p class="project-desc">A minimal typing improvement tool focused on enhancing typing speed and accuracy
-              through real-time feedback.</p>
+            <p class="project-desc">An AI-powered money operating system that brings personal finances and shared expenses into one place.</p>
             <ul class="project-highlights">
-              <li>Built real-time typing feedback and performance tracking</li>
-              <li>Implemented accuracy and speed measurement mechanisms</li>
-              <li>Designed a distraction-free interface for focused practice</li>
+              <li>Track expenses, budgets, and savings goals</li>
+              <li>Split group expenses and simplify settlements</li>
+              <li>Scan receipts and explore spending with an AI assistant</li>
             </ul>
-            <div class="project-tech">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-            </div>
+            <div class="project-tech"><span>Next.js</span><span>TypeScript</span><span>Prisma</span><span>PostgreSQL</span></div>
           </div>
         </article>
+
+        <article class="project-card reveal-item">
+          <div class="project-card-inner">
+            <div class="project-icon" aria-hidden="true"></div>
+            <div class="project-header">
+              <div><h3 class="project-name">CareLink-Bharat</h3><p class="project-kicker">Real-time feedback tool</p></div>
+              <a href="https://github.com/suhr25/CareLink-Bharat" target="_blank" rel="noopener noreferrer" aria-label="View CareLink source on GitHub" class="project-link-icon"><svg width="16" height="16"><use href="#i-github"/></svg></a>
+            </div>
+            <p class="project-desc">A minimal typing improvement tool focused on enhancing typing speed and accuracy through real-time feedback.</p>
+            <ul class="project-highlights">
+              <li>Real-time typing feedback and tracking</li>
+              <li>Accuracy and speed measurement</li>
+              <li>Distraction-free practice interface</li>
+            </ul>
+            <div class="project-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ DEVELOPER CARD ═══════════ -->
+  <section id="card" class="section devcard-section" aria-labelledby="devcard-title">
+    <div class="container">
+      <div class="section-header section-header--center">
+        <span class="section-number">04</span>
+        <h2 class="section-title" id="devcard-title"><span>Developer <em>Profile</em></span></h2>
+      </div>
+      <p class="devcard-hint"><span class="hint-fine">Move to tilt</span><span class="hint-touch">Drag to tilt</span> · Click a stat to inspect · Drag sideways to spin</p>
+
+      <div class="devcard-stage">
+        <!-- Left: card metadata -->
+        <div class="devcard-aside devcard-aside--meta">
+          <p class="mono-label">Profile Details</p>
+          <dl class="meta-list">
+            <div><dt>Role</dt><dd class="rarity-text">Open Source Contributor</dd></div>
+            <div><dt>Specialization</dt><dd>AI/ML · Systems</dd></div>
+            <div><dt>Area</dt><dd>Open Source</dd></div>
+            <div><dt>Year</dt><dd>2026</dd></div>
+          </dl>
+          <div class="ability">
+            <p class="mono-label">Technical Focus</p>
+            <p class="ability-name">Dataflow Systems</p>
+            <p class="ability-text">Wires intelligent agents into real and simulated environments , robotics pipelines, CI and runtimes that stay testable.</p>
+          </div>
+        </div>
+
+        <!-- Center: the card -->
+        <div class="devcard-wrap">
+          <div class="devcard-glow" aria-hidden="true"></div>
+          <div class="devcard" id="devcard" data-face="front">
+            <div class="devcard-spinner">
+              <!-- FRONT -->
+              <div class="devcard-face devcard-front">
+                <div class="devcard-border" aria-hidden="true"></div>
+                <div class="devcard-inner">
+                  <header class="dc-head">
+                    <div>
+                      <p class="dc-rarity">AI/ML · Systems Engineering</p>
+                      <h3 class="dc-name">Suhrid Marwah</h3>
+                    </div>
+                    <div class="dc-hp"><span>OSS ORGS</span><strong>8<sup>+</sup></strong></div>
+                  </header>
+                  <div class="dc-art">
+                    <canvas class="dc-canvas" aria-hidden="true"></canvas>
+                    <span class="dc-type">◆ Systems · Robotics</span>
+                    <span class="dc-monogram" aria-hidden="true">SM</span>
+                  </div>
+                  <p class="dc-quote">“Bridges intelligent agents with the real world , one dataflow at a time.”</p>
+                  <ul class="dc-stats" aria-label="Card stats. Select one to view details">
+                    <li><button type="button" class="dc-stat" data-stat="0" style="--v:.8;--c:#78dcca"><span class="k">Orgs</span><span class="bar"><i></i></span><span class="v">8</span></button></li>
+                    <li><button type="button" class="dc-stat" data-stat="1" style="--v:.6;--c:#64d8cb"><span class="k">Work</span><span class="bar"><i></i></span><span class="v">3</span></button></li>
+                    <li><button type="button" class="dc-stat" data-stat="2" style="--v:.88;--c:#6cc3ff"><span class="k">Langs</span><span class="bar"><i></i></span><span class="v">7</span></button></li>
+                    <li><button type="button" class="dc-stat" data-stat="3" style="--v:.75;--c:#b58cff"><span class="k">Domains</span><span class="bar"><i></i></span><span class="v">6+</span></button></li>
+                    <li><button type="button" class="dc-stat" data-stat="4" style="--v:.5;--c:#4fd6a4"><span class="k">Builds</span><span class="bar"><i></i></span><span class="v">4</span></button></li>
+                  </ul>
+                  <footer class="dc-foot"><span class="stars" aria-label="3 stars">★★★</span><span>github / suhr25 · 2026 · 001/001</span></footer>
+                </div>
+                <div class="devcard-holo" aria-hidden="true"></div>
+                <div class="devcard-glare" aria-hidden="true"></div>
+              </div>
+              <!-- BACK -->
+              <div class="devcard-face devcard-back" aria-live="polite">
+                <div class="devcard-border" aria-hidden="true"></div>
+                <div class="devcard-inner">
+                  <div class="dcb-top">
+                    <button type="button" class="dcb-back">← Front</button>
+                    <span class="dcb-count"><span class="dcb-index">1</span> / 5</span>
+                  </div>
+                  <div class="dcb-tabs" role="tablist" aria-label="Stats">
+                    <button type="button" role="tab" id="card-tab-0" aria-controls="card-stat-panel" data-stat="0">Orgs</button>
+                    <button type="button" role="tab" id="card-tab-1" aria-controls="card-stat-panel" data-stat="1">Work</button>
+                    <button type="button" role="tab" id="card-tab-2" aria-controls="card-stat-panel" data-stat="2">Langs</button>
+                    <button type="button" role="tab" id="card-tab-3" aria-controls="card-stat-panel" data-stat="3">Domains</button>
+                    <button type="button" role="tab" id="card-tab-4" aria-controls="card-stat-panel" data-stat="4">Builds</button>
+                  </div>
+                  <div class="dcb-panel" id="card-stat-panel" role="tabpanel" tabindex="0"></div>
+                  <div class="dcb-nav">
+                    <button type="button" class="dcb-prev" aria-label="Previous stat">‹</button>
+                    <span class="dcb-dots" aria-hidden="true"></span>
+                    <button type="button" class="dcb-next" aria-label="Next stat">›</button>
+                  </div>
+                </div>
+                <div class="devcard-glare" aria-hidden="true"></div>
+              </div>
+            </div>
+          </div>
+          <div class="devcard-floor" aria-hidden="true"></div>
+        </div>
+
+        <!-- Right: stat index -->
+        <div class="devcard-aside devcard-aside--index">
+          <p class="mono-label">Stat index</p>
+          <ol class="stat-index">
+            <li><button type="button" data-stat="0"><span class="si-n">8</span><span class="si-k">Orgs</span><span class="si-d">Open source organisations</span></button></li>
+            <li><button type="button" data-stat="1"><span class="si-n">3</span><span class="si-k">Work</span><span class="si-d">Highlighted contributions</span></button></li>
+            <li><button type="button" data-stat="2"><span class="si-n">7</span><span class="si-k">Langs</span><span class="si-d">Languages shipped in</span></button></li>
+            <li><button type="button" data-stat="3"><span class="si-n">6+</span><span class="si-k">Domains</span><span class="si-d">Problem spaces</span></button></li>
+            <li><button type="button" data-stat="4"><span class="si-n">4</span><span class="si-k">Builds</span><span class="si-d">Selected projects</span></button></li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Stat detail content (read by devcard.js, readable without JS) -->
+      <div class="dc-details" hidden>
+        <template data-stat="0">
+          <p class="dcb-kicker">Stat analysis · Orgs</p>
+          <h4 class="dcb-title"><strong>8</strong> Open source orgs</h4>
+          <ul class="dcb-list">
+            <li><b>Dora</b><span>· Rust robotics dataflow</span></li>
+            <li><b>OpenROAD</b><span>· Chip-design tooling, CI/CD</span></li>
+            <li><b>MalariaGEN</b><span>· Genomic pipelines</span></li>
+            <li><b>Rattler</b><span>· Conda resolver in Rust</span></li>
+            <li><b>Skforecast</b><span>Time-series forecasting</span></li>
+            <li><b>CNCF</b><span>Cloud-native ecosystem</span></li>
+            <li><b>OpenTelemetry</b><span>Observability · TS / Python</span></li>
+            <li><b>WasmEdge</b><span>WebAssembly runtime · C++</span></li>
+          </ul>
+        </template>
+        <template data-stat="1">
+          <p class="dcb-kicker">Stat analysis · Work</p>
+          <h4 class="dcb-title"><strong>3</strong> Highlighted contributions</h4>
+          <ul class="dcb-list dcb-list--rich">
+            <li><b>Dora</b><span>Dataflow architectures and agent-based systems for real or simulated environments, in Rust.</span></li>
+            <li><b>OpenROAD</b><span>Containerization, CI/CD, cross-platform validation and test infrastructure for OpenROAD-MCP.</span></li>
+            <li><b>MalariaGEN</b><span>Large-scale genomic datasets and scientific computing pipelines.</span></li>
+          </ul>
+          <p class="dcb-why"><span>Also</span> with Rattler · programme</p>
+        </template>
+        <template data-stat="2">
+          <p class="dcb-kicker">Stat analysis · Langs</p>
+          <h4 class="dcb-title"><strong>7</strong> Languages</h4>
+          <div class="dcb-meters">
+            <div style="--m:.95"><b>Rust</b><i></i><span>core</span></div>
+            <div style="--m:.9"><b>C++</b><i></i><span>core</span></div>
+            <div style="--m:.9"><b>Python</b><i></i><span>core</span></div>
+            <div style="--m:.7"><b>TypeScript</b><i></i><span>web</span></div>
+            <div style="--m:.7"><b>JavaScript</b><i></i><span>web</span></div>
+            <div style="--m:.5"><b>Go</b><i></i><span>infra</span></div>
+            <div style="--m:.45"><b>Verilog</b><i></i><span>hw</span></div>
+          </div>
+        </template>
+        <template data-stat="3">
+          <p class="dcb-kicker">Stat analysis · Domains</p>
+          <h4 class="dcb-title"><strong>6+</strong> Technical Domains</h4>
+          <div class="dcb-chips"><span>Robotics</span><span>AI Agents</span><span>Simulation</span><span>Machine Learning</span><span>Genomics</span><span>Embedded</span><span>Forecasting</span></div>
+          <p class="dcb-why"><span>Origin</span> Arduino (C++) in class 9 sparked the hardware + systems path.</p>
+        </template>
+        <template data-stat="4">
+          <p class="dcb-kicker">Stat analysis · Builds</p>
+          <h4 class="dcb-title"><strong>4</strong> Selected Projects</h4>
+          <ul class="dcb-list">
+            <li><b>Evenly</b><span>AI money OS · Next.js, Prisma</span></li>
+            <li><b>Exponent</b><span>Live market analysis · APIs</span></li>
+            <li><b>FocusFlow</b><span>Deep-work productivity</span></li>
+            <li><b>CareLink-Bharat</b><span>Real-time typing feedback</span></li>
+          </ul>
+          <a class="dcb-link" href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer">All repositories ↗</a>
+        </template>
       </div>
     </div>
   </section>
@@ -370,87 +465,42 @@
   <section id="skills" class="section skills-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">04.</span>
-        <h2 class="section-title"><span>Skills &amp; Tools</span></h2>
+        <span class="section-number">05</span>
+        <h2 class="section-title"><span>Skills &amp; <em>Tools</em></span></h2>
         <div class="section-line"></div>
       </div>
 
       <div class="skills-grid">
         <div class="skill-category reveal-item">
-          <h3 class="skill-cat-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
-              <polyline points="16 18 22 12 16 6" />
-              <polyline points="8 6 2 12 8 18" />
-            </svg>
-            Languages
-          </h3>
+          <h3 class="skill-cat-title"><span class="cat-idx">01</span>Languages</h3>
           <div class="skill-tags-grid">
-            <span class="skill-tag">Rust</span>
-            <span class="skill-tag">C++</span>
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">Go</span>
+            <span class="skill-tag">Rust</span><span class="skill-tag">C++</span><span class="skill-tag">Python</span>
+            <span class="skill-tag">TypeScript</span><span class="skill-tag">JavaScript</span><span class="skill-tag">Go</span>
             <span class="skill-tag">Verilog</span>
           </div>
         </div>
-
         <div class="skill-category reveal-item">
-          <h3 class="skill-cat-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
-              <rect x="2" y="3" width="20" height="14" rx="2" />
-              <line x1="8" y1="21" x2="16" y2="21" />
-              <line x1="12" y1="17" x2="12" y2="21" />
-            </svg>
-            Systems & Infrastructure
-          </h3>
+          <h3 class="skill-cat-title"><span class="cat-idx">02</span>Systems &amp; Infrastructure</h3>
           <div class="skill-tags-grid">
-            <span class="skill-tag">Distributed Systems</span>
-            <span class="skill-tag">Dataflow Architectures</span>
-            <span class="skill-tag">CI/CD Pipelines</span>
-            <span class="skill-tag">Docker</span>
-            <span class="skill-tag">Git</span>
-            <span class="skill-tag">GitHub Actions</span>
-            <span class="skill-tag">Kubernetes</span>
-            <span class="skill-tag">Linux</span>
+            <span class="skill-tag">Distributed Systems</span><span class="skill-tag">Dataflow Architectures</span>
+            <span class="skill-tag">CI/CD Pipelines</span><span class="skill-tag">Docker</span><span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub Actions</span><span class="skill-tag">Kubernetes</span><span class="skill-tag">Linux</span>
           </div>
         </div>
-
         <div class="skill-category reveal-item">
-          <h3 class="skill-cat-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
-              <circle cx="12" cy="12" r="3" />
-              <path
-                d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83" />
-            </svg>
-            Domains
-          </h3>
+          <h3 class="skill-cat-title"><span class="cat-idx">03</span>Domains</h3>
           <div class="skill-tags-grid">
-            <span class="skill-tag">Robotics</span>
-            <span class="skill-tag">AI Agents</span>
-            <span class="skill-tag">Simulation Systems</span>
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">Genomics / BioInfo</span>
-            <span class="skill-tag">Arduino / Embedded</span>
-            <span class="skill-tag">Time-Series Forecasting</span>
+            <span class="skill-tag">Robotics</span><span class="skill-tag">AI Agents</span><span class="skill-tag">Simulation Systems</span>
+            <span class="skill-tag">Machine Learning</span><span class="skill-tag">Genomics / BioInfo</span>
+            <span class="skill-tag">Arduino / Embedded</span><span class="skill-tag">Time-Series Forecasting</span>
             <span class="skill-tag">Open Source</span>
           </div>
         </div>
-
         <div class="skill-category reveal-item">
-          <h3 class="skill-cat-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="22" height="22">
-              <path
-                d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
-            </svg>
-            Tools & Frameworks
-          </h3>
+          <h3 class="skill-cat-title"><span class="cat-idx">04</span>Tools &amp; Frameworks</h3>
           <div class="skill-tags-grid">
-            <span class="skill-tag">Dora Framework</span>
-            <span class="skill-tag">OpenROAD</span>
-            <span class="skill-tag">Rattler</span>
-            <span class="skill-tag">Skforecast</span>
-            <span class="skill-tag">Jupyter</span>
-            <span class="skill-tag">Three.js</span>
+            <span class="skill-tag">Dora Framework</span><span class="skill-tag">OpenROAD</span><span class="skill-tag">Rattler</span>
+            <span class="skill-tag">Skforecast</span><span class="skill-tag">Jupyter</span><span class="skill-tag">Three.js</span>
             <span class="skill-tag">REST APIs</span><span class="skill-tag">OpenTelemetry</span><span class="skill-tag">WasmEdge</span>
           </div>
         </div>
@@ -462,115 +512,55 @@
   <section id="connect" class="section connect-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-number">05.</span>
-        <h2 class="section-title"><span>Contact</span></h2>
+        <span class="section-number">06</span>
+        <h2 class="section-title"><span><em>Contact</em></span></h2>
         <div class="section-line"></div>
       </div>
 
       <div class="connect-content">
-        <p class="connect-intro reveal-item">I'm always open for discussing new projects, creative ideas, or
-          opportunities to collaborate. Please feel free to reach out through any of the channels below.</p>
+        <p class="connect-big reveal-item">Let's build something <em>reliable</em>.</p>
+        <p class="connect-intro reveal-item">I'm always open to discussing new projects, creative ideas, or opportunities to collaborate. Reach out through any of the channels below.</p>
 
         <div class="connect-cards">
-          <a href="https://www.linkedin.com/in/suhrid-marwah-25261109-cs/" target="_blank" rel="noopener noreferrer"
-            class="connect-card reveal-item" id="connect-linkedin" aria-label="Connect on LinkedIn">
-            <div class="connect-card-glow"></div>
+          <a href="https://www.linkedin.com/in/suhrid-marwah-25261109-cs/" target="_blank" rel="noopener noreferrer" class="connect-card reveal-item" id="connect-linkedin">
             <div class="connect-card-content">
-              <div class="connect-icon linkedin-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                </svg>
-              </div>
-              <h3>LinkedIn</h3>
-              <p>Let's connect professionally</p>
-              <span class="connect-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
+              <div class="connect-icon"><svg><use href="#i-linkedin"/></svg></div>
+              <h3>LinkedIn</h3><p>Let's connect professionally</p>
+              <span class="connect-arrow"><svg width="18" height="18"><use href="#i-out"/></svg></span>
             </div>
           </a>
-
-          <a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer" class="connect-card reveal-item"
-            id="connect-github" aria-label="View GitHub profile">
-            <div class="connect-card-glow"></div>
+          <a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer" class="connect-card reveal-item" id="connect-github">
             <div class="connect-card-content">
-              <div class="connect-icon github-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                </svg>
-              </div>
-              <h3>GitHub</h3>
-              <p>Explore my open-source work</p>
-              <span class="connect-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
+              <div class="connect-icon"><svg><use href="#i-github"/></svg></div>
+              <h3>GitHub</h3><p>Explore my open-source work</p>
+              <span class="connect-arrow"><svg width="18" height="18"><use href="#i-out"/></svg></span>
             </div>
           </a>
-
-          <a href="mailto:suhridmarwah07@gmail.com" target="_blank"
-            rel="noopener noreferrer" class="connect-card reveal-item" id="connect-email" aria-label="Send an email">
-            <div class="connect-card-glow"></div>
+          <div class="connect-card connect-card--email reveal-item" id="connect-email">
             <div class="connect-card-content">
-              <div class="connect-icon email-icon">
-                <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-              </div>
-              <h3>Email</h3>
+              <div class="connect-icon"><svg><use href="#i-mail"/></svg></div>
+              <h3><a href="mailto:suhridmarwah07@gmail.com">Email</a></h3>
               <p>suhridmarwah07@gmail.com</p>
-              <span class="connect-arrow">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
+              <button type="button" class="copy-email" data-email="suhridmarwah07@gmail.com"><span>Copy</span></button>
             </div>
-          </a>
+          </div>
         </div>
-
-
       </div>
     </div>
   </section>
-
-  <!-- ═══════════ FOOTER ═══════════ -->
   </main>
+
   <footer id="footer" class="footer">
     <div class="container footer-inner">
       <div class="footer-socials">
-        <a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-          class="footer-social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/suhrid-marwah-25261109-cs/" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn" class="footer-social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-          </svg>
-        </a>
-        <a href="mailto:suhridmarwah07@gmail.com" target="_blank"
-          rel="noopener noreferrer" aria-label="Email" class="footer-social-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-          </svg>
-        </a>
+        <a href="https://github.com/suhr25" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="footer-social-icon"><svg><use href="#i-github"/></svg></a>
+        <a href="https://www.linkedin.com/in/suhrid-marwah-25261109-cs/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="footer-social-icon"><svg><use href="#i-linkedin"/></svg></a>
+        <a href="mailto:suhridmarwah07@gmail.com" aria-label="Email" class="footer-social-icon"><svg><use href="#i-mail"/></svg></a>
       </div>
-      <p class="footer-text">Designed &amp; Built by <span class="highlight">Suhrid Marwah</span></p>
+      <p class="footer-text">Designed &amp; built by <span class="highlight">Suhrid Marwah</span></p>
     </div>
     <button id="back-to-top" class="back-to-top" aria-label="Back to top">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M18 15l-6-6-6 6" />
-      </svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6" /></svg>
     </button>
   </footer>
 
@@ -578,6 +568,7 @@
   <script src="script.js" defer></script>
   <script src="background.js" defer></script>
   <script src="scroll-motion.js" defer></script>
+  <script src="devcard.js" defer></script>
 </body>
 
 </html>
